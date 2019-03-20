@@ -1,0 +1,9 @@
+<ScrollView>
+    <ListView [items]="challenges" (itemTap)="onItemTap($event)" iosEstimatedRowHeight="65" class="list-group">
+        <ng-template let-item="item" let-odd="odd" let-even="even">
+            <StackLayout>
+                <Label [text]="item" class="list-group-item"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</ScrollView>
