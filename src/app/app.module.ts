@@ -6,17 +6,24 @@ import { CurrentChallengeComponent } from "./challenges/current-challenge/curren
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
-import { ChallengeEditComponent } from './challenges/challenge-edit/challenge-edit.component';
-import { AuthComponent } from './auth/auth.component';
-import { TodayComponent } from './challenges/today/today.component';
+import { ChallengeEditComponent } from "./challenges/challenge-edit/challenge-edit.component";
+import { AuthComponent } from "./auth/auth.component";
+import { TodayComponent } from "./challenges/today/today.component";
+import { AppRoutingModule } from "./app.routing.module";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 @NgModule({
     bootstrap: [AppComponent],
-    imports: [NativeScriptModule, NativeScriptFormsModule],
-    declarations: [AppComponent, CurrentChallengeComponent, ChallengeEditComponent, AuthComponent, TodayComponent],
+    imports: [NativeScriptModule, NativeScriptFormsModule, AppRoutingModule],
+    declarations: [
+        AppComponent,
+        CurrentChallengeComponent,
+        ChallengeEditComponent,
+        AuthComponent,
+        TodayComponent
+    ],
     providers: [],
     schemas: [NO_ERRORS_SCHEMA]
 })
